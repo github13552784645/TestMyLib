@@ -15,6 +15,7 @@
 		E247EC3420D9CA2B0085BB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E247EC3320D9CA2B0085BB66 /* main.m */; };
 		E247EC3E20D9CA2C0085BB66 /* TestMyLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E247EC3D20D9CA2C0085BB66 /* TestMyLibTests.m */; };
 		E247EC4920D9CA2C0085BB66 /* TestMyLibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E247EC4820D9CA2C0085BB66 /* TestMyLibUITests.m */; };
+		E247EC5D20D9CABB0085BB66 /* libMyLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E247EC5C20D9CABB0085BB66 /* libMyLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E247EC4420D9CA2C0085BB66 /* TestMyLibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMyLibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E247EC4820D9CA2C0085BB66 /* TestMyLibUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMyLibUITests.m; sourceTree = "<group>"; };
 		E247EC4A20D9CA2C0085BB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E247EC5B20D9CABA0085BB66 /* MyLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLib.h; sourceTree = "<group>"; };
+		E247EC5C20D9CABB0085BB66 /* libMyLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMyLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E247EC5D20D9CABB0085BB66 /* libMyLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,8 @@
 		E247EC1820D9CA2A0085BB66 = {
 			isa = PBXGroup;
 			children = (
+				E247EC5920D9CABA0085BB66 /* include */,
+				E247EC5C20D9CABB0085BB66 /* libMyLib.a */,
 				E247EC2320D9CA2A0085BB66 /* TestMyLib */,
 				E247EC3C20D9CA2C0085BB66 /* TestMyLibTests */,
 				E247EC4720D9CA2C0085BB66 /* TestMyLibUITests */,
@@ -130,6 +136,22 @@
 				E247EC4A20D9CA2C0085BB66 /* Info.plist */,
 			);
 			path = TestMyLibUITests;
+			sourceTree = "<group>";
+		};
+		E247EC5920D9CABA0085BB66 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E247EC5A20D9CABA0085BB66 /* MyLib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E247EC5A20D9CABA0085BB66 /* MyLib */ = {
+			isa = PBXGroup;
+			children = (
+				E247EC5B20D9CABA0085BB66 /* MyLib.h */,
+			);
+			path = MyLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +461,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = she.TestMyLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,6 +480,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = she.TestMyLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
