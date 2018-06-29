@@ -21,11 +21,10 @@
     
     [MyLib Output:@"hello"];
     NSLog(@"update");
-<<<<<<< HEAD
     NSLog(@"update..");
     NSLog(@"update..。");
-=======
->>>>>>> parent of e328e53... 第二次修改
+
+
 }
 
 
