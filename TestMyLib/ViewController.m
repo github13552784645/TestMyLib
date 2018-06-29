@@ -22,6 +22,7 @@
     [MyLib Output:@"hello"];
     NSLog(@"update");
     NSLog(@"update..");
+    NSLog(@"update..。");
 }
 
 

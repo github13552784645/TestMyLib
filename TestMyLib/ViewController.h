@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
-
+@property (assign, nonatomic) int nCount;//
 @end
 
